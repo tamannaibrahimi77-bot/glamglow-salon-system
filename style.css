@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+   
+    
+    transition: background-image 1s ease-in-out;
+
+
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url('b.jpg');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    padding: 20px;
+    text-align: center;
+    color: #442714;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Bolin Gerii', serif;
+}
+
+header:hover {
+    color: peru;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+h1, h2 {
+    text-align: center;
+    color: sienna;
+}
+
+h1:hover, h2:hover {
+    color: #13000a;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.service-box p {
+    background: bisque;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: sienna;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#totalPrice {
+    text-align: center;
+    color: black;
+    margin-top: 15px;
+}
+
+#bookingForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: bisque;
+}
+
+#confirmation {
+    margin-top: 15px;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Navigation menu styling */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;      /* allow wrapping on mobile */
+    gap: 50px;            /* smaller gap for all screens */
+    margin: 15px 0;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: sienna;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: peru;
+}
+
+/* Slider styling */
+.slider {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: #fff;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 10);
+    animation: scroll 25s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;   /* stack links vertically */
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 20px;          /* smaller font for mobile */
+    }
+
+    .slider {
+        height: 180px;
+    }
+
+    .slide {
+        width: 180px;
+        height: 180px;
+    }
+
+    .slide-track {
+        width: calc(180px * 10);
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #bookingForm input, button {
+        width: 100%;
+    }
+}

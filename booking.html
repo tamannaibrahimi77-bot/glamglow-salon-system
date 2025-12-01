@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>GlamGlow Beauty Salon</h1>
+         <h1 style="color: rgb(185, 131, 60); font-style: italic; font-family:Georgia, 'Times New Roman', Times, 
+         serif; font-size: medium; text-align:center;">Glow from within, shine on the outside.</h1>
+    </header>
+    <div class="slider">
+    <div class="slide-track">
+        <div class="slide"><img src="s2.jpg"></div>
+        <div class="slide"><img src="bride.jpg"></div>
+        <div class="slide"><img src="hs.php"></div>
+        <div class="slide"><img src="cut.jpg"></div>
+        <div class="slide"><img src="hair.jpg"></div>
+
+        <!-- Duplicate images for smooth infinite loop -->
+        <div class="slide"><img src="facial.jpg"></div>
+        <div class="slide"><img src="hs.jpg"></div>
+        <div class="slide"><img src="nails.jpg"></div>
+        <div class="slide"><img src="salon.jpg"></div>
+        <div class="slide"><img src="makeup.jpg"></div>
+    </div>
+</div>
+
+    <section class="services">
+      <div class="about-us">
+    <nav>
+        <h2><a href="index.html">Home</a></h2>
+        <h2><a href="aboutUs.html">About Us</a></h2>
+        <h2><a href="contact.html">Contact Us</a></h2>
+    </nav>
+</div>
+
+        <h1 style="color: white; background-color: saddlebrown; text-align: center; padding: 10px;">
+  Booking
+</h1>
+        <h2>Our Services</h2>
+        <div class="service-box">
+            <p><input type="checkbox" class="service" value="800"> Haircut – Rs. 800</p>
+            <p><input type="checkbox" class="service" value="1500"> Hair Color – Rs. 1500</p>
+            <p><input type="checkbox" class="service" value="600"> Manicure – Rs. 600</p>
+            <p><input type="checkbox" class="service" value="700"> Pedicure – Rs. 700</p>
+            <p><input type="checkbox" class="service" value="900"> Facial – Rs. 900</p>
+        </div>
+
+        <button id="calcBtn">Calculate Price</button>
+        <h3 id="totalPrice"></h3>
+    </section>
+
+    <section class="booking">
+        <h2>Book Your Appointment</h2>
+
+        <form id="bookingForm" action="insert.php" method="post">
+            <input type="text" name="Name" id="name" placeholder="Your Name" required>
+            <input type="email" name="Email" id="email" placeholder="Your Email" required>
+            <input type="text" name="Contact" id="contact" placeholder="Contact Number" required>
+    
+            <input type="time" name="Time" id="time" required>
+             <input type="date" name="Date" id="date" required>
+
+            <!-- Hidden input for total price -->
+            <input type="hidden" name="Price" id="PriceInput" value="0">
+
+            <button type="submit">Book Now</button>
+        </form>
+
+        <p id="confirmation"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
